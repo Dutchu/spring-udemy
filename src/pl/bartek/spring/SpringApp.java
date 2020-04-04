@@ -1,6 +1,7 @@
 package pl.bartek.spring;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import pl.bartek.spring.coaches.Coach;
 
 public class SpringApp {
     public static void main(String[] args) {
@@ -13,7 +14,7 @@ public class SpringApp {
         Coach coach = applicationContext.getBean("coach", Coach.class);
 
         //call methods on the bean
-        System.out.println(coach.training());
+        System.out.println(coach.training() + "\n" + coach.getFortune());
 
         //close the context
         applicationContext.close();

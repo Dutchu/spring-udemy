@@ -15,7 +15,12 @@
         <property name="rootLoggerLevel" value="FINE"/>
     </bean>
 
-    <bean id="coach" class="pl.bartek.spring.TestCoach">
+    <bean id="fortune" class="pl.bartek.spring.fortune.HappyFortuneService"/>
+
+    <bean id="coach" class="pl.bartek.spring.coaches.TrackCoach" >
+
+        <!-- constructor injection -->
+        <constructor-arg ref="fortune"/>
     </bean>
 
 </beans>

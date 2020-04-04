@@ -1,8 +1,11 @@
 package pl.bartek.spring;
 
+import pl.bartek.spring.coaches.Coach;
+import pl.bartek.spring.coaches.TrackCoach;
+
 public class MyApp {
     public static void main(String[] args) {
-        Coach baseballcoach = new TrackCoach();
-        System.out.println(baseballcoach.training());
+        Coach baseballCoach = new TrackCoach();
+        System.out.println(baseballCoach.training());
     }
 }
