@@ -8,8 +8,16 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- Define your beans here -->
-    <bean id="coach" class="pl.bartek.spring.TrackCoach">
+
+    <!-- Logger Bean -->
+    <bean id="logger" class="pl.bartek.spring.LoggerConfig">
+        <property name="printedLoggerLevel" value="FINE"/>
+        <property name="rootLoggerLevel" value="FINE"/>
     </bean>
+
+    <bean id="coach" class="pl.bartek.spring.BaseballCoach">
+    </bean>
+
 </beans>
 
 
