@@ -7,6 +7,9 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+
+    <context:property-placeholder location="classpath:coach.properties"/>
+
     <!-- Define your beans here -->
 
     <!-- Logger Bean -->
@@ -24,8 +27,11 @@
         <!-- set up for setter inections -->
         <property name="fortuneService" ref="myFortune"/>
         <!-- Injecting literal values -->
-        <property name="email" value="xD@xd.com"/>
-        <property name="team" value="suckers"/>
+<!--        <property name="email" value="xD@xd.com"/>-->
+        <property name="email" value="${email}"/>
+<!--        <property name="team" value="suckers"/>-->
+        <property name="team" value="${team}"/>
+
     </bean>
 
     <bean id="coach"
