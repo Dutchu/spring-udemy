@@ -17,7 +17,7 @@ public class BaseballCoach implements Coach {
     }
 
     @Override
-    public String getFortune() {
+    public String getFortuneService() {
         return fortuneService.getFortune();
     }
     @Override

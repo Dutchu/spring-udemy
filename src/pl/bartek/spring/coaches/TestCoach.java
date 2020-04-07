@@ -24,7 +24,7 @@ public class TestCoach implements Coach {
     }
 
     @Override
-    public String getFortune() {
+    public String getFortuneService() {
         return fortuneService.getFortune();
     }
 }
