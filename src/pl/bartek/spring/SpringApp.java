@@ -13,8 +13,12 @@ public class SpringApp {
         //retrieve bean from spring container
         Coach coach = applicationContext.getBean("coach", Coach.class);
 
+        Coach setterCoach = applicationContext.getBean("setterCoach", Coach.class);
+
         //call methods on the bean
         System.out.println(coach.training() + "\n" + coach.getFortune());
+        System.out.println(setterCoach.training() + "\n" + setterCoach.getFortune());
+
 
         //close the context
         applicationContext.close();
