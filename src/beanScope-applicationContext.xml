@@ -7,35 +7,14 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!-- load the properties file -->
-    <context:property-placeholder location="classpath:coach.properties"/>
 
     <!-- Define your beans here -->
-
-    <!-- Logger Bean -->
-    <bean id="logger" class="pl.bartek.spring.LoggerConfig">
-        <property name="printedLoggerLevel" value="FINE"/>
-        <property name="rootLoggerLevel" value="FINE"/>
-    </bean>
-
 
     <bean id="myFortune"
           class="pl.bartek.spring.fortune.RandomFortune"/>
 
-    <bean id="setterCoach"
-          class="pl.bartek.spring.coaches.SetterCoach">
-        <!-- set up for setter inections -->
-        <property name="fortuneService" ref="myFortune"/>
-        <!-- Injecting literal values -->
-
-        <!--<property name="email" value="xD@xd.com"/>-->
-        <property name="email" value="${email}"/>
-        <!--<property name="team" value="suckers"/>-->
-        <property name="team" value="${team}"/>
-    </bean>
-
     <bean id="coach"
-          class="pl.bartek.spring.coaches.TrackCoach">
+          class="pl.bartek.spring.coaches.TrackCoach" scope="prototype">
         <!-- constructor injection -->
         <constructor-arg ref="myFortune"/>
     </bean>

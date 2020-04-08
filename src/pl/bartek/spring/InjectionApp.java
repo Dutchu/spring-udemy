@@ -4,7 +4,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import pl.bartek.spring.coaches.Coach;
 import pl.bartek.spring.coaches.SetterCoach;
 
-public class SpringApp {
+public class InjectionApp {
     public static void main(String[] args) {
 
         //load spring configuration file
