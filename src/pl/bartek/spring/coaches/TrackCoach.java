@@ -13,6 +13,20 @@ public class TrackCoach implements Coach {
     }public TrackCoach(){
     }
 
+    /**
+     * method called when bean is initialized
+     * */
+    public void initBean() {
+        System.out.println("Bean is initialized");
+    }
+
+    /**
+     * method called when bean is destroyed
+     * */
+    public void destroyBean() {
+        System.out.println("Bean is being destroyed");
+    }
+
     @Override
     public String getFortuneService() {
         return fortuneService.getFortune();

@@ -14,7 +14,9 @@
           class="pl.bartek.spring.fortune.RandomFortune"/>
 
     <bean id="coach"
-          class="pl.bartek.spring.coaches.TrackCoach" scope="prototype">
+          class="pl.bartek.spring.coaches.TrackCoach" scope="singleton"
+            init-method="initBean"
+            destroy-method="destroyBean">
         <!-- constructor injection -->
         <constructor-arg ref="myFortune"/>
     </bean>

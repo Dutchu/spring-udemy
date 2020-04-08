@@ -13,7 +13,7 @@
     <!-- Define your beans here -->
 
     <!-- Logger Bean -->
-    <bean id="logger" class="pl.bartek.spring.LoggerConfig">
+    <bean id="logger" class="pl.bartek.spring.logger.LoggerConfig">
         <property name="printedLoggerLevel" value="FINE"/>
         <property name="rootLoggerLevel" value="FINE"/>
     </bean>

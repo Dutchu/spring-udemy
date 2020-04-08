@@ -1,4 +1,4 @@
-package pl.bartek.spring;
+package pl.bartek.spring.logger;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
